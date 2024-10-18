@@ -11,6 +11,14 @@ export default defineConfig({
                 target: 'http://localhost:4000', // Your Express server will run on port 4000
                 changeOrigin: true,
             }
-        }
-    },
-});
+        },
+
+        proxy: {
+            // Proxy /git-admin requests to the Express server
+            '/api': {
+                target: 'http://localhost:5000', // Your Express server will run on port 5000
+                changeOrigin: true,
+                secure: false
+            }
+        },
+    });
