@@ -1,32 +1,12 @@
 {
-  "name": "quiz-builder-2.0-client",
-  "private": true,
-  "what_is_private": "Private means the project is not intended for use in other applications",
-  "version": "1.0.1",
-  "type": "module",
+  "name": "morales-quiz-builder-2.0-vite",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
-    "dev:client": "vite",
-    "dev:server": "node api/server.js",
-    "build": "vite build",
-    "lint": "eslint . --ext .js,.jsx --report-unused-disable-directives --max-warnings 0 --fix --cache --format stylish",
-    "preview": "vite preview"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.11.1",
-    "@types/react": "^18.3.10",
-    "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.2",
-    "concurrently": "^9.0.1",
-    "eslint": "^9.11.1",
-    "eslint-plugin-react": "^7.37.0",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.12",
-    "globals": "^15.9.0",
-    "vite": "^5.4.8"
-  }
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
