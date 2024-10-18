@@ -1,4 +1,4 @@
-// server/routes.js
+// App/server/routes.js
 
 const express = require('express');
 const router = express.Router();
@@ -54,7 +54,7 @@ router.get('/quizzes/:quizName', async (req, res) => {
 
     // Process shuffling
     const processedQuestions = quizQuestions.map(question => {
-      const seed = hashString(question.questionName + quizInfo.seedExtension);
+      const seed = hashString(question.questionName + quizInfo.seedExtension + quizInfo.version);
       const { shuffled, correctIndex } = shuffleArray(question.options, seed);
       return {
         id: question.id,
@@ -83,7 +83,7 @@ router.post('/quizzes', async (req, res) => {
       return res.status(400).json({ error: 'Invalid quiz data' });
     }
 
-    // Save the quiz to GitHub
+    // Save the quiz to GitHub or local filesystem
     await HttpClient.saveQuiz(quizData);
     res.status(201).json({ message: 'Quiz saved successfully' });
   } catch (error) {
