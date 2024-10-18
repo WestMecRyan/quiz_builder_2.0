@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <!-- Orange W -->
+  <path d="M10 10 L30 90 L50 30 L70 90 L90 10" fill="none" stroke="orange" stroke-width="10"/>
+
+  <!-- Blue M (Adjusted to align with W) -->
+  <path d="M110 90 L130 10 L150 90 L170 10 L190 90" fill="none" stroke="blue" stroke-width="10"/>
+</svg>
